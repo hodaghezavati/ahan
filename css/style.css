@@ -1,0 +1,91 @@
+
+.container{
+    position:relative;
+    width:40vw;
+}
+.container__img{
+    height:23rem;
+}
+.main_button{
+    background-color: transparent;
+    border:1px solid white;
+    color:white;
+    text-decoration: none;
+    bottom:5rem;
+    left:3rem;
+    z-index:10;
+    padding:.5rem;
+    display:none;
+}
+.main_button:hover{
+    background-color: white;
+    color:black;
+}
+.pos{
+    position:absolute;
+}
+.number{
+    font-size: 9rem;
+    font-weight: 900;
+    top:-4rem;
+    right:8rem;
+    color:rgba(255,255,255,.4);
+    z-index:10;
+    
+}
+.main__heading{
+   top:9rem;
+   left:3rem;
+   color:white;
+   z-index:10;
+}
+.main__text{
+    top:11rem;
+   left:3rem;
+   color:white;
+   z-index:10;
+}
+.container:hover .main_button{
+    display: inline;
+    animation-name: moveintop;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+.container:hover .number{
+
+    animation-name: moveinbottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+.main_url{
+    right:5rem;
+    bottom:1rem;
+    color:white;
+
+}
+
+@keyframes moveintop{
+	
+	0%{
+		opacity:0;
+		transform:translatey(-50px);
+	}
+	
+	100%{
+		opacity:1;
+		transform:translate(0);
+	}
+	
+}
+
+@keyframes moveinbottom{
+	
+	0%{
+        transform:translate(0);
+		
+	}
+		
+	100%{
+        transform:translateY(-3rem);
+	}
+}
