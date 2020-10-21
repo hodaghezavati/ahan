@@ -2,6 +2,7 @@
 .container{
     position:relative;
     width:40vw;
+    
 }
 .container__img{
     height:23rem;
@@ -31,7 +32,7 @@
     right:8rem;
     color:rgba(255,255,255,.4);
     z-index:10;
-    
+    transition: transform .5s;
 }
 .main__heading{
    top:9rem;
@@ -48,14 +49,12 @@
 .container:hover .main_button{
     display: inline;
     animation-name: moveintop;
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-timing-function: ease-in-out;
 }
 .container:hover .number{
 
-    animation-name: moveinbottom;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+    transform: translateY(-3rem)
 }
 .main_url{
     right:5rem;
@@ -78,14 +77,3 @@
 	
 }
 
-@keyframes moveinbottom{
-	
-	0%{
-        transform:translate(0);
-		
-	}
-		
-	100%{
-        transform:translateY(-3rem);
-	}
-}
